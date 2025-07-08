@@ -1,0 +1,136 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(45deg, #86cdad, #7caaaa);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.weather-container {
+    background:linear-gradient(45deg,#dc7c9c,#e79fa9);
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color:rgb(33, 33, 35);
+    max-width: 400px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.weather-container:hover {
+    transform: translateY(-5px);
+}
+
+input{
+    width: 80%;
+    padding: 0.75em;
+    margin: 0.5em 0;
+    border-radius: 8px;
+    
+    border: 2px solid green;
+    font-size: 1em;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+button {
+    width: 60%;
+    padding: 0.75em;
+    margin: 0.5em 0;
+    border-radius: 8px;
+    
+    border: 1px solid #ccc;
+    font-size: 1em;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+input:focus {
+    border-color: #00aaff;
+    box-shadow: 0 0 5px rgba(0, 170, 255, 0.3);
+}
+
+button {
+    background-color: #7851cc;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border: 1px solid black;
+}
+
+button:hover {
+    background-color: #008ecc;
+    box-shadow: 0 4px 12px rgba(0, 170, 255, 0.3);
+    transform: scale(1.03);
+}
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2em;
+    padding: 2em;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.forecast-container {
+    background: linear-gradient(45deg, #f7d9d9, #e8bcbc);
+    margin-top:25px;
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    color: #333;
+    max-width: 300px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.forecast-container:hover {
+    transform: translateY(-5px);
+}
+
+.forecast-day {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 1em;
+    margin: 0.5em 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+#forecastToggle{
+    background-color: #dd3f7e;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid blue;
+}
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 1em;
+        height: auto;
+    }
+
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+        gap: 1.5em;
+    }
+
+    .weather-container,
+    .forecast-container {
+        max-width: 90%;
+        padding: 1.5em;
+    }
+
+    input,
+    button {
+        width: 100%;
+    }
+}

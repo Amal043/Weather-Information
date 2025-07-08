@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Check</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="weather-container">
+            <h1>Weather Information</h1>
+            <input type="text" id="cityInput" placeholder="Enter City Name">
+            <button onclick="getWeather()">Get Weather</button>
+            <div id="weatherResult"></div>
+            <button id="forecastToggle" onclick="showForecast()" style="display:none;">Next 3-Days Forecast</button>
+        </div>
+        <div class="forecast-container" id="forecastContainer" style="display:none;"></div>
+    </div>
+    <script src="weather.js"></script>
+</body>
+
+</html>
